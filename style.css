@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: var(--background);
+  height: 100vh;
+  color: white;
+}
+:root {
+  --background: radial-gradient(
+    269.02% 186.27% at 96.21% 166.59%,
+    rgb(76, 161, 210) 0%,
+    rgb(40, 91, 174) 100%
+  );
+}
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 20px;
+  max-width: 1280px;
+}
+h1 {
+  text-align: center;
+}
+/* settings" */
+.settings {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.settings__item {
+  display: flex;
+  flex-direction: column;
+}
