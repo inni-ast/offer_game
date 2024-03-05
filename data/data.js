@@ -55,6 +55,7 @@ export function catchOffer(params) {
 }
 function missOffer(params) {
   data.scores.missesCount++;
+
   if (data.scores.missesCount === data.settings.maximumMissesCount) {
     data.gameStatus = GAME_STATUSES.FINISH;
     clearInterval(jumpIntervalId);
@@ -76,4 +77,12 @@ export function startNewGame() {
 
   subscriber();
   runJumpInterval();
+}
+
+export function showStartPage() {
+  data.gameStatus = GAME_STATUSES.SETTINGS;
+  data.scores.catchesCount = 0;
+  data.scores.missesCount = 0;
+
+  subscriber();
 }

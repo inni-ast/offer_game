@@ -20,6 +20,11 @@ body {
   padding: 5px 20px;
   max-width: 1280px;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 h1 {
   text-align: center;
 }
@@ -33,4 +38,42 @@ h1 {
 .settings__item {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+.btn {
+  align-self: center;
+  margin-top: 15%;
+  border-radius: 30px;
+  padding: 12px 36px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  background: #b0c255;
+  border: 1px solid #b0c255;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: #fff;
+  transition: all 3ms;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #fff;
+  color: #b0c255;
+  transition: all 3ms;
+}
+option {
+  cursor: pointer;
+}
+.finish {
+  margin: 0 auto;
+  max-width: fit-content;
+  padding: 1%;
+}
+/* GAME */
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }

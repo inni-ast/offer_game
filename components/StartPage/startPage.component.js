@@ -4,7 +4,9 @@ import { MaxMisses } from "./SelectMaxMisses/maxMisses.component.js";
 import { SelectPointsToWin } from "./SelectPointsToWin/selectPointsToWin.component.js";
 
 export function StartPage() {
-  const container = document.createElement("section");
+  const container = document.createElement("main");
+  container.classList.add("main");
+
   const headerElement = document.createElement("h1");
   headerElement.append("Catch the Offer");
 

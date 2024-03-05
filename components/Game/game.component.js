@@ -4,7 +4,7 @@ import { Settings } from "./Settings/settings.component.js";
 
 export function Game() {
   const container = document.createElement("div");
-  container.append("hello, game");
+  container.classList.add("game");
   const settingsElement = Settings();
   const scoresElement = Scores();
   const gridElement = Grid();

@@ -1,12 +1,12 @@
-import { startNewGame } from "../../data/data.js";
+import { showStartPage } from "../../../data/data.js";
 
-export function Button() {
+export function ButtonPlayAgain() {
   const btnElement = document.createElement("button");
   btnElement.classList.add("btn");
 
-  btnElement.append("Start game");
+  btnElement.append("Play again");
   btnElement.addEventListener("click", () => {
-    startNewGame();
+    showStartPage();
   });
   return btnElement;
 }

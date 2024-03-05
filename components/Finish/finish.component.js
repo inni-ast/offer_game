@@ -1,14 +1,22 @@
 import { data } from "../../data/data.js";
-import { Button } from "../common/button.component.js";
+import { ButtonPlayAgain } from "./BtnPlayAgain/btnPlayAgain.component.js";
+import { Lose } from "./Lose/lose.component.js";
+import { Win } from "./Win/win.component.js";
 
 export function Finish() {
   const finishElement = document.createElement("div");
+  finishElement.classList.add("main", "finish");
 
   if (data.scores.catchesCount === data.settings.pointsToWin) {
-    finishElement.append("Win");
+    const winElement = Win(data.scores.catchesCount, data.scores.missesCount);
+
+    finishElement.append(winElement);
   } else {
-    finishElement.append("You lose!");
+    const loseElement = Lose(data.scores.catchesCount, data.scores.missesCount);
+
+    finishElement.append(loseElement);
   }
-  finishElement.append(Button());
+
+  finishElement.append(ButtonPlayAgain());
   return finishElement;
 }
